@@ -1,0 +1,59 @@
+{
+  "name": "readase",
+  "version": "1.0.0",
+  "description": "Read Adobe Swatch (ASE) files",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/readase",
+  "homepage": "https://github.com/jonathantneal/readase#readme",
+  "bugs": "https://github.com/jonathantneal/readase/issues",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "npm run lint:ec && npm run lint:js",
+    "lint:ec": "echint",
+    "lint:js": "eslint *.js --cache --ignore-pattern .gitignore",
+    "prepublish": "npm test",
+    "tape": "node test",
+    "test": "npm run lint && npm run tape"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "devDependencies": {
+    "echint": "^2.1.1",
+    "echint-config-dev": "1.0.0",
+    "eslint": "^3.14.0",
+    "eslint-config-dev": "1.0.0",
+    "jscs": "^3.0.7",
+    "jscs-config-dev": "1.0.1",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "echint": {
+    "extends": "dev"
+  },
+  "eslintConfig": {
+    "extends": "dev"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "read",
+    "file",
+    "buffer",
+    "adobe",
+    "ase",
+    "swatch",
+    "color",
+    "convert",
+    "transform",
+    "transpile",
+    "json"
+  ]
+}
